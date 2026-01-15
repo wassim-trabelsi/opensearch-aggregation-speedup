@@ -317,9 +317,6 @@ Please list all plugins currently enabled.
 - opensearch-ubi
 - query-insights
 
-## Screenshots
-
-If applicable, add screenshots to help explain your problem.
 
 ## Host/Environment (please complete the following information):
 

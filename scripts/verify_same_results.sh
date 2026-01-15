@@ -35,7 +35,7 @@ BASIC_RESPONSE=$(curl -s -X POST "$OPENSEARCH_URL/$INDEX_NAME/_search" \
                 \"knn\": {
                   \"sanitized_knowledge_record.embedding\": {
                     \"vector\": $QUERY_VECTOR,
-                    \"k\": 1000,
+                    \"k\": 100,
                     \"boost\": 0.97
                   }
                 }
@@ -70,7 +70,7 @@ AGG_RESPONSE=$(curl -s -X POST "$OPENSEARCH_URL/$INDEX_NAME/_search" \
                 \"knn\": {
                   \"sanitized_knowledge_record.embedding\": {
                     \"vector\": $QUERY_VECTOR,
-                    \"k\": 1000,
+                    \"k\": 100,
                     \"boost\": 0.97
                   }
                 }

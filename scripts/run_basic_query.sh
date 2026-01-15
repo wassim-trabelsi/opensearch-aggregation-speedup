@@ -41,7 +41,7 @@ for i in $(seq 1 $ITERATIONS); do
                     \"knn\": {
                       \"sanitized_knowledge_record.embedding\": {
                         \"vector\": $QUERY_VECTOR,
-                        \"k\": 1000,
+                        \"k\": 100,
                         \"boost\": 0.97
                       }
                     }

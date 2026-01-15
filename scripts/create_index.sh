@@ -16,7 +16,7 @@ RESPONSE=$(curl -s -w "\n%{http_code}" -X PUT "$OPENSEARCH_URL/$INDEX_NAME" \
   "settings": {
     "index": {
       "knn": true,
-      "knn.algo_param.ef_search": 100
+      "knn.algo_param.ef_search": 1000
     }
   },
   "mappings": {
@@ -29,7 +29,7 @@ RESPONSE=$(curl -s -w "\n%{http_code}" -X PUT "$OPENSEARCH_URL/$INDEX_NAME" \
             "method": {
               "name": "hnsw",
               "space_type": "cosinesimil",
-              "engine": "lucene",
+              "engine": "faiss",
               "parameters": {
                 "ef_construction": 128,
                 "m": 24
